@@ -3,18 +3,19 @@ import time
 import shutil
 
 
-dir =                      input('Enter Directory >> ')
+dir = input('Enter Directory >> ')
 print()
 
 
 #Input your own directorys
-music =       '/Users/younes/Desktop/Main/Music'
-school =      '/Users/younes/Desktop/Main/School'
-python_code = '/Users/younes/Desktop/Main/Python'
-wallpapers =  '/Users/younes/Desktop/Main/Wallpapers'
-downloads =   '/Users/younes/Downloads'
-programs =    '/Users/younes/Desktop/Main/Programme'
-unknown =     '/Users/younes/Desktop/Main/Unknown'
+music =       'C:\\Users\\berki\\Desktop\\Main\\Music'
+school =      'C:\\Users\\berki\\Desktop\\Main\\School'
+python_code = 'C:\\Users\\berki\\Desktop\\Main\\Python'
+wallpapers =  'C:\\Users\\berki\\Desktop\\Main\\Wallpapers'
+downloads =   'C:\\Users\\berki\\Downloads'
+programs =    'C:\\Users\\berki\\Desktop\\Main\\Programme'
+unknown =     'C:\\Users\\berki\\Desktop\\Main\\Unknown'
+desktop =     'C:\\Users\\berki\\Desktop'
 
 
 if dir == 'music':
@@ -25,6 +26,9 @@ if dir == 'school' or dir == 'Schule' or dir == 'schule':
 
 if dir == 'python code' or dir == 'python':
     dir = python_code
+
+if dir == 'desktop' or dir == 'Desktop':
+    dir = desktop
 
 if dir == 'wallpapers' or dir == 'wallpaper':
     dir = wallpapers
@@ -47,11 +51,11 @@ while running == True:
                 print('-    ', file)
                 print('\n')
 
-                if file.endswith(".txt") or file.endswith(".pdf") or file.endswith(".docx") or file.endswith(".pptx"):
-                    shutil.move(f"{dir}/{file}", school)
-                    print('[+] Found file for school!')
-                    print('-    ', file)
-                    print('\n')
+            if file.endswith(".txt") or file.endswith(".pdf") or file.endswith(".docx") or file.endswith(".pptx"):
+                shutil.move(f"{dir}/{file}", school)
+                print('[+] Found file for school!')
+                print('-    ', file)
+                print('\n')
 
             if file.endswith(".py"):
                 shutil.move(f"{dir}/{file}", python_code)

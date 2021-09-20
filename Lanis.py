@@ -1,6 +1,57 @@
 from selenium import webdriver
 import time
 
+def clear_win():
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
 
 def options():
     print('OPTIONS')
@@ -9,15 +60,17 @@ def options():
     print('[3] Vertretungen')
     print('--------------------')
     print()
-options()
 
+options()
 option = input('>> ')
 
 if option == '1':
     driver = webdriver.Chrome()
     driver.get('https://start.schulportal.hessen.de/?i=6063')
-
     driver.minimize_window()
+
+
+    time.sleep(2)
 
     username = driver.find_element_by_xpath('//*[@id="inputEmail"]')
     username.send_keys('Younes.Berkia')
@@ -32,15 +85,18 @@ if option == '1':
 
     time.sleep(4)
 
-    lessons = driver.find_element_by_xpath('//*[@id="sortablestart"]/li[1]/div/div[2]/a/h3')
+    lessons = driver.find_element_by_xpath('//*[@id="sortablestart"]/li[2]')
     lessons.click()
 
     driver.maximize_window()
+    clear_win()
+
+
 if option == '2':
     driver = webdriver.Chrome()
     driver.get('https://start.schulportal.hessen.de/?i=6063')
-
     driver.minimize_window()
+
 
     username = driver.find_element_by_xpath('//*[@id="inputEmail"]')
     username.send_keys('Younes.Berkia')
@@ -61,11 +117,14 @@ if option == '2':
     website = driver.title
     print(website)
     driver.maximize_window()
+    clear_win()
+
+
 if option == '3':
     driver = webdriver.Chrome()
     driver.get('https://start.schulportal.hessen.de/?i=6063')
-
     driver.minimize_window()
+
 
     username = driver.find_element_by_xpath('//*[@id="inputEmail"]')
     username.send_keys('Younes.Berkia')
@@ -83,3 +142,4 @@ if option == '3':
     missing = driver.find_element_by_xpath('//*[@id="sortablestart"]/li[5]/div/div[2]/a/h3')
     missing.click()
     driver.maximize_window()
+    clear_win()
