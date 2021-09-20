@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning C# and JavaScript.
 - 🌱 I have mastered Python as well as html and css.
 - 💞️ 
-- 📫 How to reach me berkiayouness@gmail.com
+- 📫 
 
 <!---
 YounesBerkia/YounesBerkia is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
