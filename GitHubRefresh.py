@@ -5,6 +5,7 @@ import time
 
 
 driver = webdriver.Chrome()
+driver.minimize_window()
 driver.get('https://github.com/login')
 
 
@@ -36,10 +37,10 @@ time.sleep(4)
 
 
 driver.maximize_window()
-time.sleep(1)
+time.sleep(0.3)
 
 pyautogui.leftClick(x=682, y=541)
-time.sleep(1)
+time.sleep(0.3)
 
 
 pyautogui.leftClick(x=78, y=228)
@@ -50,6 +51,8 @@ pyautogui.leftClick(x=280, y=338)
 pyautogui.hotkey('ctrl', 'a')
 pyautogui.press('enter')
 
-time.sleep(4)
+time.sleep(10)
 commit = driver.find_element_by_xpath('//*[@id="repo-content-pjax-container"]/form/button')
-commit.click()
+commit.click() 
+
+driver.close()
